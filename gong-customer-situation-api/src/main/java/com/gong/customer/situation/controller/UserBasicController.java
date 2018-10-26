@@ -1,4 +1,4 @@
-package com.gong.controller;
+package com.gong.customer.situation.controller;
 
 import com.gong.customer.situation.service.UserBasicService;
 import com.ypzdw.commons.BaseResponse;
@@ -19,8 +19,10 @@ public class UserBasicController {
     @Autowired
     private UserBasicService userBasicService;
 
-    @GetMapping("/get-user-basic")
+    @RequestMapping("/get-user-basic")
     public BaseResponse getUserBasic(){
-        return BaseResponse.buildSuccess(userBasicService.searchUserBasic());
+        return BaseResponse.buildSuccess("gyk");
+
+       // return BaseResponse.buildSuccess(userBasicService.searchUserBasic());
     }
 }

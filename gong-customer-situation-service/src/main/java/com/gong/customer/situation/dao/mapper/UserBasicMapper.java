@@ -4,6 +4,7 @@ import com.gong.customer.situation.domain.UserBasic;
 import com.gong.customer.situation.domain.UserBasicExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 public interface UserBasicMapper {
     int countByExample(UserBasicExample example);

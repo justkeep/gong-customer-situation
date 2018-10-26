@@ -1,17 +1,13 @@
-package com.gong;
+package com.gong.customer.situation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author 59448
  */
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
-@ComponentScan(value = "com.gong")
+@SpringBootApplication(scanBasePackages = {"com.gong.customer.situation.dao.mapper"})
 public class CustomerSituationApiApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerSituationApiApplication.class, args);
 	}
