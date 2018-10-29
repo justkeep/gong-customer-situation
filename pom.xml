@@ -11,5 +11,6 @@
 	<modules>
 		<module>gong-customer-situation-service</module>
 		<module>gong-customer-situation-api</module>
+		<module>gong-customer-situation-web</module>
 	</modules>
 </project>
