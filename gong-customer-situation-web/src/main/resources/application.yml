@@ -24,5 +24,5 @@ spring:
             enabled: true
 # Mybatis配置
 mybatis:
-    mapperLocations: classpath:gong/customer/situation/sqlmap/*.xml
+    mapperLocations: classpath:gong.customer.situation.sqlmap/*.xml
     configLocation: classpath:mybatis-config.xml

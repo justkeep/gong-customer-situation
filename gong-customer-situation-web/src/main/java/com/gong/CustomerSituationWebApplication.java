@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.gong"})
+@ComponentScan(value = "com.gong")
 @MapperScan("com.gong.customer.situation.dao.mapper")
 public class CustomerSituationWebApplication {
 

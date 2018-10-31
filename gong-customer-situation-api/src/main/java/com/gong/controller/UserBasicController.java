@@ -21,8 +21,8 @@ public class UserBasicController {
 
     @RequestMapping("/get-user-basic")
     public BaseResponse getUserBasic(){
-        return BaseResponse.buildSuccess("gyk");
+        //return BaseResponse.buildSuccess("gyk");
 
-       // return BaseResponse.buildSuccess(userBasicService.searchUserBasic());
+       return BaseResponse.buildSuccess(userBasicService.searchUserBasic());
     }
 }

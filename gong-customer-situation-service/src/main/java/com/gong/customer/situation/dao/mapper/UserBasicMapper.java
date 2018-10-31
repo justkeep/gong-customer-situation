@@ -3,6 +3,8 @@ package com.gong.customer.situation.dao.mapper;
 import com.gong.customer.situation.domain.UserBasic;
 import com.gong.customer.situation.domain.UserBasicExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
