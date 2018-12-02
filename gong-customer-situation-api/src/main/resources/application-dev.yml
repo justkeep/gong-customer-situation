@@ -27,3 +27,5 @@ spring:
     username: ypzdw
     password: ypzdw
     driver-class-name: com.mysql.jdbc.Driver
+  aop:
+    proxy-target-class: true
