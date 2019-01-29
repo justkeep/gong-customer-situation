@@ -10,7 +10,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class CustomerSituationWebApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void quickSort() {
 	}
 
+    public static void main(String[] args) {
+        String i = "1";
+        StringBuilder ii = new StringBuilder().append(1);
+        if (i.equals(1)){
+            System.out.println(1);
+        }
+    }
 }
