@@ -76,9 +76,9 @@
         </dependency>
 
         <dependency>
-            <groupId>ypzdw-commons</groupId>
+            <groupId>com.gitee.sevenday</groupId>
             <artifactId>commons-web-lib</artifactId>
-            <version>0.5.5</version>
+            <version>0.6.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>

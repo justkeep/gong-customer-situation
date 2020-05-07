@@ -1,7 +1,7 @@
 package com.gong.controller;
 
 import com.gong.customer.situation.service.UserBasicService;
-import com.ypzdw.commons.BaseResponse;
+import com.seven.commons.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
