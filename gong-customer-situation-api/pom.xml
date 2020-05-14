@@ -73,9 +73,9 @@
 		</dependency>
 
 		<dependency>
-				<groupId>com.gitee.sevenday</groupId>
-				<artifactId>commons-web-lib</artifactId>
-				<version>0.6.2</version>
+			<groupId>com.gitee.sevenday</groupId>
+			<artifactId>commons-web-lib</artifactId>
+			<version>0.6.2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.servlet</groupId>

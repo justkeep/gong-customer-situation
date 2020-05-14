@@ -31,7 +31,7 @@ public class CustomerSituationApiApplicationTests {
 		//测试正常用户登录
 		loginService.login("user_2");
 		//测试非法用户登录
-		loginService.login("user_1");
+		//loginService.login("user_1");
 	}
 
 	@Test
@@ -76,43 +76,43 @@ public class CustomerSituationApiApplicationTests {
 	}
 
 
-	public static void createTree(TreeRoot treeRoot, int value) {
-
-
-		//如果树根为空(第一次访问)，将第一个值作为根节点
-		if (treeRoot.getTreeRoot() == null) {
-			TreeNode treeNode = new TreeNode(value);
-			treeRoot.setTreeRoot(treeNode);
-
-		} else  {
-
-			//当前树根
-			TreeNode tempRoot = treeRoot.getTreeRoot();
-
-			while (tempRoot != null) {
-				//当前值大于根值，往右边走
-				if (value > tempRoot.getValue()) {
-
-					//右边没有树根，那就直接插入
-					if (tempRoot.getRightNode() == null) {
-						tempRoot.setRightNode(new TreeNode(value));
-						return ;
-					} else {
-						//如果右边有树根，到右边的树根去
-						tempRoot = tempRoot.getRightNode();
-					}
-				} else {
-					//左没有树根，那就直接插入
-					if (tempRoot.getLefTreeNode() == null) {
-						tempRoot.setLefTreeNode(new TreeNode(value));
-
-						return;
-					} else {
-						//如果左有树根，到左边的树根去
-						tempRoot = tempRoot.getLefTreeNode();
-					}
-				}
-			}
-		}
-	}
+//	public static void createTree(TreeRoot treeRoot, int value) {
+//
+//
+//		//如果树根为空(第一次访问)，将第一个值作为根节点
+//		if (treeRoot.getTreeRoot() == null) {
+//			TreeNode treeNode = new TreeNode(value);
+//			treeRoot.setTreeRoot(treeNode);
+//
+//		} else  {
+//
+//			//当前树根
+//			TreeNode tempRoot = treeRoot.getTreeRoot();
+//
+//			while (tempRoot != null) {
+//				//当前值大于根值，往右边走
+//				if (value > tempRoot.getValue()) {
+//
+//					//右边没有树根，那就直接插入
+//					if (tempRoot.getRightNode() == null) {
+//						tempRoot.setRightNode(new TreeNode(value));
+//						return ;
+//					} else {
+//						//如果右边有树根，到右边的树根去
+//						tempRoot = tempRoot.getRightNode();
+//					}
+//				} else {
+//					//左没有树根，那就直接插入
+//					if (tempRoot.getLefTreeNode() == null) {
+//						tempRoot.setLefTreeNode(new TreeNode(value));
+//
+//						return;
+//					} else {
+//						//如果左有树根，到左边的树根去
+//						tempRoot = tempRoot.getLefTreeNode();
+//					}
+//				}
+//			}
+//		}
+//	}
 }
