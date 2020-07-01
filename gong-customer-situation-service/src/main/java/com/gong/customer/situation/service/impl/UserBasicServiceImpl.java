@@ -5,6 +5,7 @@ import com.gong.customer.situation.domain.UserBasic;
 import com.gong.customer.situation.service.UserBasicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class UserBasicServiceImpl implements UserBasicService {
     @Autowired
     private UserBasicDao userBasicDao;
     @Override
+    @Transactional
     public List<UserBasic> searchUserBasic() {
         return userBasicDao.searchUserBasic();
     }
