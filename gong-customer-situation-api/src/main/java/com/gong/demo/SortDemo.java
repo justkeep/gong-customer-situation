@@ -2,6 +2,7 @@ package com.gong.demo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 /**
  * 二分法查找一个元素在数组中的位置
@@ -67,7 +68,7 @@ public class SortDemo {
         if (startPoint>=endIndex){
             return;
         }
-        int i = divisionIndex(arrays, startPoint, endIndex);
+        int i = divisionIndex2(arrays, startPoint, endIndex);
         fastSort(arrays,startPoint,i-1);
         fastSort(arrays,i+1,endIndex);
     }
@@ -98,5 +99,37 @@ public class SortDemo {
         arrays[startIndex] = arrays[leftPoint];
         arrays[leftPoint] = baseline;
         return leftPoint;
+    }
+
+    /**
+     * 快排（单边循环）
+     * @param arrays
+     * @param startIndex
+     * @param endIndex
+     * @return
+     */
+    private static int divisionIndex2(int[] arrays,int startIndex,int endIndex){
+        int mark = startIndex;
+        Random rand = new Random();
+        //随机选取基准数的下标
+        int randIndex = rand.nextInt(endIndex-startIndex+1) +startIndex;
+        if (randIndex!=startIndex){
+            int temp = arrays[startIndex];
+            arrays[startIndex] = arrays[randIndex];
+            arrays[randIndex] = temp;
+        }
+        //获取基准数
+        int pivotIndex = arrays[startIndex];
+        for (int i=startIndex+1;i<=endIndex;i++){
+            if (arrays[i]<pivotIndex){
+                mark = mark+1;
+                int p = arrays[mark];
+                arrays[mark] = arrays[i];
+                arrays[i] = p;
+            }
+        }
+        arrays[startIndex] = arrays[mark];
+        arrays[mark] = pivotIndex;
+        return mark;
     }
 }
