@@ -26,6 +26,7 @@ public class SortDemo {
 
       System.out.println(getPower(2.1,-1));
   }
+
   /**
    * 二分法查询指定元素所在位置
    * @param list 从小到大的有序list
