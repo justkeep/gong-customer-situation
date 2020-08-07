@@ -6,6 +6,18 @@ import org.openjdk.jol.info.ClassLayout;
 public class SyncDemo {
     static User user = new User();
 
+    /**
+     * 查看jvm 可设置的参数
+     * java -XX:+PrintFlagsFinal
+     * 偏向锁启动延迟时间： -XX:BiasedLockingStartupDelay=4000
+     * 偏向锁开关：-XX:UseBiasedLocking=true
+     * 开启偏向锁：
+     * -XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0 -client -Xmx1024m -Xms1024m
+     * 关闭偏向锁
+     * -XX:+UseBiasedLocking -client -Xmx512m -Xms512m
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws InterruptedException {
 
         /**
@@ -48,8 +60,6 @@ public class SyncDemo {
         ThreadDemo threadDemo2 = new ThreadDemo();
         threadDemo2.setName("thread-2");
         threadDemo2.start();
-//
-
     }
 
     public static class ThreadDemo extends Thread {
