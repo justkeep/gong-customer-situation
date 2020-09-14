@@ -21,7 +21,9 @@ public class ServerSocketChannelDemo {
         serverSocketChannel.configureBlocking(false);
         serverSocketChannel.socket().bind(new InetSocketAddress(port));
         selector = Selector.open();
-        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+        SelectionKey register = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+//        register.attach(new Acceptor())
+
     }
 
     public void listener() throws IOException {

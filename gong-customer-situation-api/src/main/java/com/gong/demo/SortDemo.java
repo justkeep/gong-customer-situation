@@ -1,5 +1,7 @@
 package com.gong.demo;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
@@ -24,8 +26,11 @@ public class SortDemo {
 
 //      System.out.println(addOperation("666666666666666666666666","999999999999999999999999"));
 
-      System.out.println(getPower(2.1,-1));
+//      System.out.println(getPower(2.1,-1));
+      System.out.println(text("asdafghjka","aafasd"));
+
   }
+
 
   /**
    * 二分法查询指定元素所在位置
@@ -119,7 +124,7 @@ public class SortDemo {
 
 
     /**
-     * 快速排序 双边循环法
+     * 快速排序
      * @param arrays
      * @param startPoint
      * @param endIndex
@@ -133,6 +138,13 @@ public class SortDemo {
         fastSort(arrays,i+1,endIndex);
     }
 
+    /**
+     * 双边循环法
+     * @param arrays
+     * @param startIndex
+     * @param endIndex
+     * @return
+     */
     private static int divisionIndex(int[] arrays,int startIndex,int endIndex){
         int baseline = arrays[startIndex];
         int leftPoint = startIndex;
@@ -232,7 +244,7 @@ public class SortDemo {
             if (childrenIndex+1<length && arrays[childrenIndex+1]>arrays[childrenIndex]){
                 childrenIndex++;
             }
-            //如果父节点小于等于左右孩子的最小值，直接返回
+            //如果父节点大于等于左右孩子的最小值，直接返回
             if (temp >= arrays[childrenIndex]){
                 break;
             }
@@ -338,6 +350,27 @@ public class SortDemo {
         if(m == 1) return n;
         double temp = getPower(n,m/2);
         return m%2 == 0? temp * temp: temp * temp * n;
+    }
+
+    /**
+     * 求两个字符串的最大子串
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public static String text(String s1,String s2) {
+        String max="";String min="";
+        max=(s1.length()>s2.length())?s1:s2;
+        min=(max==s1)?s2:s1;
+        for(int x=0;x<min.length();x++){
+            for(int y=0,z=min.length()-x;z!=min.length()+1;y++,z++){
+                String temp=min.substring(y, z);
+                if(max.contains(temp)) {
+                    return temp;
+                }
+            }
+        }
+        return null;
     }
 
 }
